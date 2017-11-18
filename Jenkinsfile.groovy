@@ -5,7 +5,7 @@ pipeline {
 		stage('Build') {
 			steps {
 				echo 'Building..'
-				bat(/"D:\Hari\softwares\apache-maven-3.3.9\bin\mvn" clean package/)
+				sh 'mvn clean install'
 			}
 		}
 		stage('Test') {
