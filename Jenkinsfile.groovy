@@ -5,6 +5,7 @@ pipeline {
 		stage('Build') {
 			steps {
 				echo 'Building..'
+				bat(/"D:\DevOps\maven\apache-maven-3.5.2-bin\apache-maven-3.5.2\bin" clean package/)
 			}
 		}
 		stage('Test') {
