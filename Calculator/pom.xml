@@ -1,0 +1,120 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.devops.calculator</groupId>
+	<artifactId>Calculator</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>Calculator-App</name>
+	<description>Its a Calculator application for addition, substraction and multiplication.</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>2.5</version>
+				<configuration>
+					<filesets>
+						<fileset>
+							<directory>${basedir}/temp</directory>
+							<includes>
+								<include>*.txt</include>
+							</includes>
+						</fileset>
+					</filesets>
+				</configuration>
+			</plugin>
+
+			<!-- Trial - 1 : maven command : mvn clean install -->
+			<!--
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>2.17</version>
+			</plugin>
+			-->
+			<!-- Trial - 2 : maven command : mvn clean install -->
+			<!--
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>2.17</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>checkstyle</goal>
+						</goals>
+					</execution>
+			</plugin>
+			-->
+			<!-- Trial - 3 : maven command : mvn clean install -->
+			<!--
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>2.17</version>
+				<executions>
+					<execution>
+						<id>quality</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>checkstyle</goal>
+						</goals>
+					</execution>
+			</plugin>
+			-->
+			<!-- Trial - 4 : maven command : mvn clean install -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>2.17</version>
+				<configuration>
+					<failsOnError>false</failsOnError>
+				</configuration>
+				<executions>
+					<execution>
+						<id>quality</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>checkstyle</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- Trial - 5 : update the tag <failsOnError>true</failsOnError> : maven command : mvn clean install -->
+		<!--<plugin>
+				<groupId></groupId>
+				<artifactId></artifactId>
+				<version></version>
+				<configuration>
+				</configuration>
+				<executions>
+					<execution>
+						<id></id>
+						<phase></phase>
+						<goals>
+							<goal></goal>
+							<goal></goal>
+							<goal></goal>
+							<goal></goal>
+						</goals>
+						<configuration>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin> -->
+		</plugins>
+	</build>
+</project>
